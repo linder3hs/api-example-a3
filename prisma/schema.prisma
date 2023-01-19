@@ -34,3 +34,14 @@ model Post {
 
   @@map("posts")
 }
+
+model Person {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String
+  password     String
+  last_session DateTime
+  date_born    DateTime
+  created_at   DateTime @default(now())
+  update_at    DateTime @updatedAt
+}
